@@ -1,0 +1,8 @@
+FROM node:latest
+workdir /app
+copy package*.json /app/
+COPY server.js /app/
+copy index.html /app/
+
+run npm install 
+cmd ["node", "server.js"]
